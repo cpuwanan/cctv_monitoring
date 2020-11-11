@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+	
+	<node name="fake_image_reader" type="fake_image_reader.py" 
+				pkg="ms_perception"
+				output="screen"
+				launch-prefix=""
+	>
+		<param name="cctv_service_name" value="cctv_detection" />
+	</node>
+
+	<node name="fake_object_detector" type="fake_object_detector.py" 
+				pkg="ms_perception"
+				output="screen"
+				launch-prefix=""
+	>
+		<param name="cctv_service_name" value="cctv_detection" />
+	</node>
+		
+</launch>
