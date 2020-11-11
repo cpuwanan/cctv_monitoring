@@ -14,3 +14,6 @@ Run
 ```
 $ roslaunch ms_perception demo_findobjects_service.launch
 ```
+
+Example terminal outputs
+![snapshot_1](pictures/snapshot_1.png)
