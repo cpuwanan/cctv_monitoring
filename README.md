@@ -4,6 +4,8 @@ Tag:
 - rospy
 - rosservice
 
+## Demo 1: Simple usage
+
 Before using, give permission to script files
 ```
 $ sudo chmod +x src/ms_perception/scripts/fake_image_reader.py
