@@ -1,20 +1,36 @@
 <?xml version="1.0"?>
 <launch>
 	
-	<node name="fake_image_reader" type="fake_image_reader.py" 
-				pkg="ms_perception"
-				output="screen"
-				launch-prefix=""
-	>
+	<arg name="object_file" default="$(find ms_perception)/config/object_descriptions.yaml" />
+
+	<node if="true"
+		name="fake_image_reader" type="fake_image_reader.py" 
+		pkg="ms_perception"
+		output="screen"
+		launch-prefix="">
 		<param name="cctv_service_name" value="cctv_detection" />
+		<param name="confidence_threshold" value="0.5" />
+		<param name="status_update_freq" value="0.25" />
+		<param name="object_descriptions_file" value="$(arg object_file)" />
+		<param name="verbose"	value="0" />
 	</node>
 
-	<node name="fake_object_detector" type="fake_object_detector.py" 
-				pkg="ms_perception"
-				output="screen"
-				launch-prefix=""
-	>
+	<node if="true"
+		name="fake_object_detector" type="fake_object_detector.py" 
+		pkg="ms_perception"
+		output="screen"
+		launch-prefix="">
 		<param name="cctv_service_name" value="cctv_detection" />
+		<param name="verbose"	value="0" />
+		<param name="object_descriptions_file" value="$(arg object_file)" />
+	</node>
+
+	<node if="true"
+		name="fake_policy_manager" type="fake_policy_manager.py" 
+		pkg="ms_perception"
+		output="screen"
+		launch-prefix="">
+		<param name="object_descriptions_file" value="$(arg object_file)" />
 	</node>
 		
 </launch>
