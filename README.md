@@ -20,4 +20,8 @@ $ roslaunch ms_perception demo_findobjects_service.launch
 
 Snapshot of results
 
-![snapshot_1](pictures/bay_status.png)
+![img1](pictures/bay_status.png)
+
+Rostopic of `/all_bays`
+
+![img2](pictures/rostopic_all_bays.png)
