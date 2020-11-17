@@ -54,6 +54,9 @@ add_message_files(
   DetectedObject.msg
   DetectedObjectArray.msg
   CCTVImage.msg
+  RectangleInt.msg
+  LoadingBay.msg
+  LoadingBayArray.msg
 )
 
 ## Generate services in the 'srv' folder
