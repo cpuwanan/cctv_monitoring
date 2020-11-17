@@ -10,6 +10,7 @@ Before using, give permission to script files
 ```
 $ sudo chmod +x src/ms_perception/scripts/fake_image_reader.py
 $ sudo chmod +x src/ms_perception/scripts/fake_object_detector.py
+$ sudo chmod +x src/ms_perception/scripts/fake_policy_manager.py
 ```
 
 Run
@@ -17,6 +18,6 @@ Run
 $ roslaunch ms_perception demo_findobjects_service.launch
 ```
 
-Example terminal outputs
+Snapshot of results
 
-![snapshot_1](pictures/snapshot_1.png)
+![snapshot_1](pictures/bay_status.png)
